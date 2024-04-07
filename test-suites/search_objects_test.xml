@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="search_suite">
+    <parameter name="className" value="m-b-12"/>
+    <!--
+        Поиск полного наименования организации
+    -->
+    <test name="search_full_name_test">
+        <parameter name="textToSearch" value="Общество с ограниченной ответственностью «Транснефть – Технологии»"/>
+        <groups>
+            <run>
+                <include name="oneObjTest"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.tnt.testing.selenide.TNTechSearchObjectsTest"/>
+        </classes>
+    </test>
+
+    <!--
+        Поиск сокращенного наименования организации
+    -->
+    <parameter name="textToSearch_1" value="ООО «Транснефть – Технологии»"/>
+    <parameter name="textToSearch_2" value="125252, г. Москва, 3-я Песчаная ул., д. 2А, Юго-Восточная (Синяя) башня, эт. 10, пом. 1005"/>
+    <test name="search_short_name_test">
+        <groups>
+            <run>
+                <include name="multiObjTest"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.tnt.testing.selenide.TNTechSearchObjectsTest"/>
+        </classes>
+    </test>
+
+    <!--
+        Поиск приёмной директора организации
+    -->
+    <test name="search_CEO_contacts_test">
+        <parameter name="textToSearch" value="Эл. почта: tnt-post@transneft.ru, телефон: +7 (495) 950-81-04"/>
+        <groups>
+            <run>
+                <include name="oneObjTest"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.tnt.testing.selenide.TNTechSearchObjectsTest"/>
+        </classes>
+    </test>
+
+    <!--
+        Поиск общего номера организации
+    -->
+    <test name="search_corporate_number_test">
+        <parameter name="textToSearch" value="Телефон: +7 (495) 252-93-70"/>
+        <groups>
+            <run>
+                <include name="oneObjTest"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.tnt.testing.selenide.TNTechSearchObjectsTest"/>
+        </classes>
+    </test>
+
+</suite>

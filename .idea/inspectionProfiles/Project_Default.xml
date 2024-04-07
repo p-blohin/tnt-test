@@ -1,0 +1,37 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="VulnerableLibrariesLocal" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="isIgnoringEnabled" value="true" />
+      <option name="ignoredModules">
+        <list>
+          <option value="tnt-test" />
+        </list>
+      </option>
+      <option name="ignoredPackages">
+        <list>
+          <option value="org.codehaus.plexus:plexus-utils:3.0.10" />
+        </list>
+      </option>
+      <option name="ignoredReasons">
+        <list>
+          <option value="Not exploitable" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="groupsTestNG" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="groups">
+        <value>
+          <list size="6">
+            <item index="0" class="java.lang.String" itemvalue="search_tests" />
+            <item index="1" class="java.lang.String" itemvalue="oneObjTest" />
+            <item index="2" class="java.lang.String" itemvalue="multiObjTest" />
+            <item index="3" class="java.lang.String" itemvalue="searchInGoogleTest" />
+            <item index="4" class="java.lang.String" itemvalue="openContactTest" />
+            <item index="5" class="java.lang.String" itemvalue="openContactsTest" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
